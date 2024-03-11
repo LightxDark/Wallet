@@ -4,7 +4,7 @@ import {Alchemy, Network} from 'alchemy-sdk'
 import Link from 'next/link';
 
 const settings = {
-  apiKey: 'F1OfOweuB6cfMJ77pBeHXBgSwhtHFEYz',
+  apiKey: process.env.ALCHEMY_API,
   network: Network.ETH_MAINNET
 }
 

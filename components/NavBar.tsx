@@ -4,7 +4,7 @@ require('dotenv').config()
 import dynamic from "next/dynamic";
 
 Moralis.start({
-    apiKey: process.env.NEXT_PUBLIC_MORALIS_API
+    apiKey: process.env.MORALIS_API
 });
 
 async function getGas() {
@@ -13,7 +13,7 @@ async function getGas() {
             `https://api.etherscan.io/api` +
             `?module=proxy` +
             `&action=eth_gasPrice` +
-            `&apikey=${process.env.NEXT_PUBLIC_ETHERSCAN_API}`
+            `&apikey=${process.env.ETHERSCAN_API}`
         );
 
         if (!response.ok) {
