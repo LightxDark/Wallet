@@ -10,7 +10,7 @@ interface WalletID {
 }
 
 const settings = {
-  apiKey: process.env.ALCHEMY_API,
+  apiKey: process.env.NEXT_PUBLIC_ALCHEMY_API,
   network: Network.ETH_MAINNET
 };
 
