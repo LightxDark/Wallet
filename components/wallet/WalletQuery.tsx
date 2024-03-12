@@ -2,6 +2,7 @@
 import React, {useEffect, useState } from 'react';
 import {Alchemy, AssetTransfersCategory, Network, SortingOrder} from 'alchemy-sdk'
 import TransactionList from './TransactionList';
+
 require('dotenv').config()
 
 interface WalletID {
@@ -11,8 +12,7 @@ interface WalletID {
 const settings = {
   apiKey: process.env.ALCHEMY_API,
   network: Network.ETH_MAINNET
-  
-}
+};
 
 const alchemy = new Alchemy(settings);
 
