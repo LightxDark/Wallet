@@ -61,7 +61,6 @@ useEffect(() => {
 
   getTransfers();
 }, [walletName]);
-  console.log(transactions)
   const extractedData = transactions.map((transaction) => ({
     asset: transaction.asset,
     category: transaction.category,
