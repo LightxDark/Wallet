@@ -52,7 +52,7 @@ const NavBar = async () => {
         <nav className='fixed w-full backdrop-blur-sm backdrop-brightness-50 shadow-2xl shadow-black justify-start border-b-2 text-lg border-gray-900 flex gap-5'>
             <a href={"/"}>
                 <section className="flex text-center bold relative cursor-pointer">
-                    <div className="transition-all duration-1000 text-transparent bg-clip-text bg-gradient-to-r to-purple-950 from-blue-500 p-5">
+                    <div className="transition-all duration-1000 text-transparent bg-clip-text bg-gradient-to-r to-purple-950 from-blue-500 p-5 hover:backdrop-brightness-100">
                         Wallet Scan  
                     </div>
                 </section>

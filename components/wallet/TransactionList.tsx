@@ -1,14 +1,5 @@
 import React from 'react';
-import Moralis from 'moralis';
-import {Alchemy, Network} from 'alchemy-sdk'
 import Link from 'next/link';
-
-const settings = {
-  apiKey: process.env.ALCHEMY_API,
-  network: Network.ETH_MAINNET
-}
-
-const alchemy = new Alchemy(settings);
 
 interface TransactionData {
   to: string;

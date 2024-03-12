@@ -1,17 +1,15 @@
 'use client'
 import React, {useEffect, useState } from 'react';
-import Moralis from 'moralis';
 import {Alchemy, AssetTransfersCategory, Network, SortingOrder} from 'alchemy-sdk'
 import TransactionList from './TransactionList';
-
-
+require('dotenv').config()
 
 interface WalletID {
   walletName: string;
 }
 
 const settings = {
-  apiKey: process.env.ALCHEMY_API,
+  string: "F1OfOweuB6cfMJ77pBeHXBgSwhtHFEYz",
   network: Network.ETH_MAINNET
 }
 
@@ -19,7 +17,7 @@ const alchemy = new Alchemy(settings);
 
 const WalletQuery: React.FC<WalletID> = ({ walletName }) => {
   const [transactions, setTransactions] = useState<any[]>([]);
-  localStorage.setItem("w", walletName)
+  () => {localStorage.setItem("w", walletName)}
 useEffect(() => {
   const getTransfers = async () => {
     try {
@@ -70,15 +68,29 @@ useEffect(() => {
     hash: transaction.hash,
     metadata: transaction.metadata.blockTimestamp,
   }));
-
+  
   return (
     <div className='f'>
       <h2 className='p-4 rounded-xl flex justify-between items-center bg-zinc-900'>Activity
       <span id="hover-tooltip" title="Note: Only the Ethereum mainnet is currently supported by this query.">ℹ</span>
 
       </h2>
+      {extractedData.length == 0 ? (
+        <>
+          <br />
+          
+          <div className='rounded-xl bg-zinc-900 text-2xl text-center py-8'>
+          <div> ❌</div>
+            No Transactions!
+          </div>
+        </>
+      ) : (
+      <div>
+        <TransactionList extractedData={extractedData}/>
 
-      <TransactionList extractedData={extractedData}/>
+      </div>
+      )}
+      
     </div>
   );
 };
