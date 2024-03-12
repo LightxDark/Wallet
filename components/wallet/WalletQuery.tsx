@@ -9,13 +9,12 @@ interface WalletID {
 }
 
 const settings = {
-  apiKey: process.env.NEXT_PUBLIC_ALCHEMY_API,
+  apiKey: process.env.ALCHEMY_API,
   network: Network.ETH_MAINNET
   
 }
 
 const alchemy = new Alchemy(settings);
-console.log(alchemy.config.apiKey)
 
 const WalletQuery: React.FC<WalletID> = ({ walletName }) => {
   const [transactions, setTransactions] = useState<any[]>([]);
