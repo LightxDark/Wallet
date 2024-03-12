@@ -13,9 +13,9 @@ export default async function WalletPage({ params }: { params: { walletName: str
       <section className="flex flex-col">
 
         <div className="bg-zinc-900 flex h-96 px-32 text-xl ">
-          <main className="flex justify-center w-full items-center text-center">
+          <main className="flex justify-center w-full items-center text-center text-3xl">
             <div className="h-fit w-fit  ">
-              Viewing: <span className="transition-all duration-100 hover:bg-inherit bg-clip-text hover:text-transparent">{params.walletName }</span>
+              Viewing: <span className="transition-all duration-100 bg-clip-text hover:text-transparent hover:bg-indigo-500">{params.walletName }</span>
             </div>
           </main>
         </div>

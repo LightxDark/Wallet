@@ -57,7 +57,7 @@ const format = (number: any) => {
 }
 
 const TransactionList: React.FC<BalanceListProps> = ({ balance }) => {
-  const filteredData = balance.filter(item => !item.possibleSpam && !(item.symbol === "") && !(item.price === null) && !(parseFloat(item.balance) > 1e12)&& !(parseFloat(item.value) < 0.01) && !(parseFloat(item.price) < 0.01));
+  const filteredData = balance.filter(item => !item.possibleSpam && !(item.symbol === "") && !(item.price === null) && !(parseFloat(item.balance) > 1e12)&& !(parseFloat(item.value) < 0.01) && !(parseFloat(item.price) < 0.01) && !(parseFloat(item.price) > 5000));
 
 
 
